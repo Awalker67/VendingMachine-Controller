@@ -8,8 +8,6 @@ void main()
     float amountDeposited = .0;
     menu(amountDeposited);
 
-
-
 }
 
 void menu(float amountDeposited)
@@ -44,8 +42,8 @@ void menu(float amountDeposited)
             printf("Enter the required password:  ");
             scanf(" %16s",&password);
             printf("%s\n", password);
-            passcheck = strcmp(password, "pass");
-            if (passcheck == 0)
+            passcheck = compareStrings(password, "pass");
+            if (passcheck == 1)
             {
                 updateItems();
             }
@@ -59,12 +57,15 @@ void menu(float amountDeposited)
             returnChange(amountDeposited);
             amountDeposited = 0;
             break;
+        case 'Z':
+            printf("Returning to menu...\n");
+            return;
+            break;
         default:
-            printf("\n\n\tINVALID INPUT");
+            printf("Invalid value eneterd. ('Z' is to return to menu)\n");
             break;
         }
-    } while (input != 'Z');
-
+    } while (1);
 }
 
 float insertMoney(float amountDeposited)
@@ -270,7 +271,7 @@ float transaction(float amountDeposited)
             break;
         case 'Z':
             printf("Returning to menu...\n");
-            return 0;
+            return amountDeposited;
         default:
             printf("Invalid value eneterd. ('Z' is to return to menu)\n");
             break;
@@ -377,4 +378,35 @@ void returnChange(float amountDeposited)
     printf(" nickel(s) -- %i", penny);
     printf(" penny(ies) --");
 
+}
+
+
+// Function to compare string for password without using the <stdio.h> library's strcmp function.
+int compareStrings(char* x, char* y)
+{
+    int flag = 0;
+
+    // Iterate a loop till the end
+    // of both the strings
+    while (*x != '\0' || *y != '\0') {
+        if (*x == *y) {
+            x++;
+            y++;
+        }
+
+        // If two characters are not same
+        // print the difference and exit
+        else if ((*x == '\0' && *y != '\0')
+            || (*x != '\0' && *y == '\0')
+            || *x != *y) {
+            flag = 1;
+            return 0;
+            break;
+        }
+    }
+
+    // If two strings are exactly same
+    if (flag == 0) {
+        return 1;
+    }
 }
