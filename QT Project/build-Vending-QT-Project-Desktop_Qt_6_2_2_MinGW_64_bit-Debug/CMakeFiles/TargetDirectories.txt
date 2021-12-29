@@ -1,5 +1,0 @@
-C:/Users/TJ/Desktop/QT Project/build-Vending-QT-Project-Desktop_Qt_6_2_2_MinGW_64_bit-Debug/CMakeFiles/Vending-QT-Project.dir
-C:/Users/TJ/Desktop/QT Project/build-Vending-QT-Project-Desktop_Qt_6_2_2_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
-C:/Users/TJ/Desktop/QT Project/build-Vending-QT-Project-Desktop_Qt_6_2_2_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
-C:/Users/TJ/Desktop/QT Project/build-Vending-QT-Project-Desktop_Qt_6_2_2_MinGW_64_bit-Debug/CMakeFiles/Vending-QT-Project_autogen_timestamp_deps.dir
-C:/Users/TJ/Desktop/QT Project/build-Vending-QT-Project-Desktop_Qt_6_2_2_MinGW_64_bit-Debug/CMakeFiles/Vending-QT-Project_autogen.dir
