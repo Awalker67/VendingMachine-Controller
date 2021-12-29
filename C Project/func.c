@@ -3,14 +3,7 @@
 #include<stdio.h>
 #include "header.h"
 
-void main()
-{
-    float amountDeposited = .0;
-    menu(amountDeposited);
-
-}
-
-void menu(float amountDeposited)
+int main(int argc, char* argv[])
 {
     char input = 0;
     char password[20];
@@ -59,13 +52,15 @@ void menu(float amountDeposited)
             break;
         case 'Z':
             printf("Returning to menu...\n");
-            return;
+            return 0;
             break;
         default:
             printf("Invalid value eneterd. ('Z' is to return to menu)\n");
             break;
         }
     } while (1);
+
+    return 0;
 }
 
 float insertMoney(float amountDeposited)
@@ -409,4 +404,5 @@ int compareStrings(char* x, char* y)
     if (flag == 0) {
         return 1;
     }
+    return 0;
 }
